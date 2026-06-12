@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/igs_ga_ii.egg-info/PKG-INFO
+src/igs_ga_ii.egg-info/SOURCES.txt
+src/igs_ga_ii.egg-info/dependency_links.txt
+src/igs_ga_ii.egg-info/requires.txt
+src/igs_ga_ii.egg-info/top_level.txt
+src/optimization/_aggregator.py
+src/optimization/igs_ga.py
