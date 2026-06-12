@@ -1,0 +1,10 @@
+[project]
+name = "igs-ga-ii"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.4.6",
+    "pymoo>=0.6.1.6",
+]
