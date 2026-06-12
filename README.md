@@ -184,7 +184,7 @@ where $t = \dfrac{x_{\max} - x}{x_{\max} - x_{\min}} \in [0, 1]$ (higher $t$ = l
 ## Demo notebook
 
 `examples/das-cmop.ipynb` demonstrates the full workflow on the
-[DAS-CMOP benchmark suite](https://pymoo.org/problems/multi/dascmop.html):
+[DAS-CMOP benchmark suite](https://pymoo.org/problems/constrained/dascmop.html):
 
 - Instantiate any `DASCMOP1`–`DASCMOP9` problem at a chosen difficulty level
 - Derive analytical objective bounds with `get_das_cmop_bounds`
