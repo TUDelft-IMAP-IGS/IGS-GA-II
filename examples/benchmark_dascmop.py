@@ -66,9 +66,9 @@ from pymoo.problems.multi.dascmop import (
 from pymoo.termination import get_termination
 from pymoo.util.ref_dirs import get_reference_directions
 
-from allodyn.genetic_algorithms.imap_ga import IMAPGA
-from allodyn.utils.imap_helpers import build_imap_config, compute_imap_scores, imap_best_from_front, make_pref_cv, run_imap_comparison
-from allodyn.utils.imap_plotting import plot_preference_functions, savefig as _savefig_helper, bar_metric as _bar_metric_helper, heatmap_imap_winner as _heatmap_imap_winner_helper
+from optimization.igs_ga import IGSGA
+from utils.imap_helpers import build_imap_config, compute_imap_scores, imap_best_from_front, make_pref_cv, run_imap_comparison
+from utils.imap_plotting import plot_preference_functions, savefig as _savefig_helper, bar_metric as _bar_metric_helper, heatmap_imap_winner as _heatmap_imap_winner_helper
 
 
 # ── Output directories ─────────────────────────────────────────────────────────
@@ -90,7 +90,7 @@ N_RUNS = 30   # independent runs per (problem, difficulty); seeds = SEED, SEED+1
 N_GEN = 1000
 POP_SIZE = 40
 
-# IMAPGA settings
+# IGSGA settings
 ARCHIVE = True
 
 # Preference-function shape used throughout (IMAP-GA warmup, Pareto-front
@@ -110,7 +110,7 @@ PREF_FN_SHAPE: str = "linear"
 #   "obj_weights" : list[float]  — weight per objective, must sum to 1.0
 #                                  and have length == n_obj.
 #   "weight"      : float        — importance of this stakeholder relative
-#                                  to others (normalised internally by IMAPGA).
+#                                  to others (normalised internally by IGSGA).
 #
 # If n_obj is not present as a key, or if any obj_weights length mismatches
 # n_obj, a single stakeholder with equal objective weights is used as fallback.
@@ -538,7 +538,7 @@ def _run_imap_ga(
         algorithm=label, problem_name="", n_obj=n_obj
     )
     try:
-        algorithm = IMAPGA(
+        algorithm = IGSGA(
             preference_functions=pref_fns,
             objective_weights=obj_weights,
             stakeholder_weights=s_weights,
