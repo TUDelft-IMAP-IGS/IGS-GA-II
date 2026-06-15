@@ -188,6 +188,7 @@ where $t = \dfrac{x_{\max} - x}{x_{\max} - x_{\min}} \in [0, 1]$ (higher $t$ = l
 
 - Instantiate any `DASCMOP1`–`DASCMOP9` problem at a chosen difficulty level
 - Derive analytical objective bounds with `get_das_cmop_bounds`
+
 - Configure stakeholders using the `STAKEHOLDERS` dict
 - Run IGS-GA and visualise convergence, Pareto front, and preference curves
 
@@ -199,3 +200,9 @@ where $t = \dfrac{x_{\max} - x}{x_{\max} - x_{\min}} \in [0, 1]$ (higher $t$ = l
 NSGA-III (tri-objective), C-TAEA, and MOEA/D-CDP across all 9 DAS-CMOP
 problems × 16 difficulty levels, with N independent runs per configuration.
 Results and plots are written to `tests/benchmark_dascmop_results/`.
+
+---
+
+## License
+
+This project is licensed under the **MIT License** - see the [`LICENSE`](./LICENSE) file for details.
