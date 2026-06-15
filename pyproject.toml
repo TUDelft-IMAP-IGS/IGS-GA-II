@@ -1,10 +1,15 @@
 [project]
 name = "igs-ga-ii"
 version = "0.1.0"
-description = "Add your description here"
+description = "An improvement on the original IGS-GA-I, based on the NSGA-II algorithm."
 readme = "README.md"
 requires-python = ">=3.13"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Lennard Timp"}
+]
+keywords = ["optimization", "genetic algorithm", "multi-objective", "decision-support", "constrained multi-objective optimisation problem"]
 dependencies = [
     "loguru>=0.7.3",
     "numpy>=2.4.6",
