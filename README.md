@@ -7,12 +7,12 @@ Multi-objective constrained optimisation using a **Genetic Algorithm** with
 
 ## What is this?
 
-The **Preferendus** method evaluates design alternatives by converting raw objective
+The **IMAP** method evaluates design alternatives by converting raw objective
 values (f1, f2, …) into *preference scores* via stakeholder-defined preference
 functions, then aggregating those scores using a population-relative z-score
 normalisation (`a_fine_aggregator`).  The key property: **the same solution can
 receive a different score in a different generation**, because scoring is relative
-to the current population — not absolute.
+to the current population - not absolute.
 
 **IGS-GA** (IMAP Genetic Algorithm) replaces NSGA-II's non-dominated sorting and
 crowding-distance survival with a two-pass IMAP affine aggregation.  Any
