@@ -7,18 +7,11 @@ Multi-objective constrained optimisation using a **Genetic Algorithm** with
 
 ## What is this?
 
-The **IMAP** method evaluates design alternatives by converting raw objective
-values (f1, f2, …) into *preference scores* via stakeholder-defined preference
-functions, then aggregating those scores using a population-relative z-score
-normalisation (`a_fine_aggregator`).  The key property: **the same solution can
-receive a different score in a different generation**, because scoring is relative
-to the current population - not absolute.
-
 **IGS-GA** (IMAP Genetic Algorithm) replaces NSGA-II's non-dominated sorting and
 crowding-distance survival with a two-pass IMAP affine aggregation.  Any
 `pymoo`-compatible problem can be solved by:
 
-1. defining preference functions and objective bounds for each objective
+1. defining preference functions and objective bounds for each stakeholder for each objective
 2. configuring stakeholder weights and preference shapes
 3. constructing an `IGSGA` instance and passing it to `pymoo_minimize`
 
